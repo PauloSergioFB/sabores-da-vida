@@ -62,3 +62,33 @@
 body {
   @apply flex min-h-dvh w-full flex-col items-center;
 }
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+}
+
+.animate-slide-down {
+  animation: slide-down 0.2s ease-out;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.2s ease-in forwards;
+}
